@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+    
+    <!-- CSS USADOS -->
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="lib/ionic-datepicker/src/ionic-datepicker.styles.css" rel="stylesheet">
+    <link href="lib/ionic-timepicker/src/ionic-timepicker.styles.css" rel="stylesheet">
+
+    <!--Scripts e plugins-->
+    <script src="js/app.js"></script>
+    <script src="lib/ionic-datepicker/dist/ionic-datepicker.bundle.min.js"></script>
+    <script src="lib/ionic-timepicker/dist/ionic-timepicker.bundle.min.js"></script>
+
+    <!-- ROUTES -->
+    <script src="js/routes.js"></script>
+     
+     <!-- SERVICES -->
+    <script src="js/services.js"></script>
+    <script src="js/services/configuracaoParcialService.js"></script>
+    <script src="js/services/agendarConsultaService.js"></script>
+    
+    <!-- DIRECTIVES -->
+    <script src="js/directives.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/easyMedCtrl.js"></script>
+    <script src="js/controllers/telaInicialPacienteCtrl.js"></script>
+    <script src="js/controllers/telaInicialMedicoCtrl.js"></script>
+    <script src="js/controllers/loginPacienteCtrl.js"></script>
+    <script src="js/controllers/loginMedicoCtrl.js"></script>
+    <script src="js/controllers/cadastroDePacienteCtrl.js"></script>
+    <script src="js/controllers/cadastroDeMedicoCtrl.js"></script>
+    <script src="js/controllers/configurarAgendaCtrl.js"></script>
+    <script src="js/controllers/agendaPadraoCtrl.js"></script>
+    <script src="js/controllers/horarioParcialDiarioCtrl.js"></script>
+    <script src="js/controllers/horarioParcialPadraoCtrl.js"></script>
+    <script src="js/controllers/agendaDiariaCtrl.js"></script>
+    <script src="js/controllers/marcarConsulta01Ctrl.js"></script>
+    <script src="js/controllers/marcarConsulta02Ctrl.js"></script>
+    <script src="js/controllers/marcarConsulta03Ctrl.js"></script>
+    <script src="js/controllers/consultasPacienteCtrl.js"></script>
+    <script src="js/controllers/consultasPacienteDetalheCtrl.js"></script>
+    <script src="js/controllers/consultasMedicoCtrl.js"></script>
+    <script src="js/controllers/consultasMedicoDetalhe01Ctrl.js"></script>
+    <script src="js/controllers/consultasMedicoDetalhe02Ctrl.js"></script>
+
+    <!-- FACTORIES -->
+    <script src="js/factories/MobileFactory.js"></script>
+    
+
+    <!-- Only required for Tab projects w/ pages in multiple tabs 
+    <script src="lib/ionicuirouter/ionicUIRouter.js"></script>
+    -->
+
+  </head>
+  <body ng-app="app" animation="slide-left-right-ios7">
+  <div>
+  <div>
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button></ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view></ion-nav-view>
+  </div>
+</div>
+  </body>
+</html>

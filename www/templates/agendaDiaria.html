@@ -1,0 +1,45 @@
+<ion-view title="Agenda Diária">
+  <ion-content padding="true" class="has-header">
+    <div class="card">
+      <div class="item item-divider">
+        Data da agenda diária
+      </div>
+      <div class="item item-icon-left" ng-click="definirData()">
+        <i class="icon ion-calendar"></i>{{ agendaPadrao.data || 'Selecione'}}
+      </div>
+      <div class="item item-divider">
+        Intervalo do período da manhã
+      </div>
+      <div class="item" style="padding:0px;">
+        <div class="button-bar">
+          <button ng-click="definirPeriodoA1()" class="button button-light button-block">{{ agendaPadrao.amHoraInicial || 'Inicio'}}</button>
+          <button ng-click="definirPeriodoA2()" class="button button-light button-block">{{ agendaPadrao.amHoraFinal || 'Fim'}}</button>
+        </div>
+      </div>
+      <div class="item item-divider">
+        Intervalo do período da tarde
+      </div>
+      <div class="item" style="padding:0px;">
+        <div class="button-bar">
+          <button ng-click="definirPeriodoB1()" class="button button-light button-block">{{ agendaPadrao.pmHoraInicial || 'Inicio'}}</button>
+          <button ng-click="definirPeriodoB2()" class="button button-light button-block">{{ agendaPadrao.pmHoraFinal || 'Fim'}}</button>
+        </div>
+      </div>
+      <div class="item item-divider">
+        Intervalo entre consultas
+      </div>
+      <div class="item">
+        <ion-radio ng-model="agendaPadrao.intervalo" ng-value="15">0:15 - 0:15</ion-radio>
+        <ion-radio ng-model="agendaPadrao.intervalo" ng-value="30">0:30 - 0:30</ion-radio>
+        <ion-radio ng-model="agendaPadrao.intervalo" ng-value="60">1:00 - 1:00</ion-radio>
+      </div>
+      <div class="item item-divider">
+        Disponibilidade
+      </div>
+      <div class="item" style="padding:0px;">
+        <button ng-click="definirConfiguracaoParcial(agendaPadrao)" class="button button-light button-block">Configurar parcialmente</button>
+      </div>
+    </div>
+    <button ng-click="salvar(agendaPadrao, diasDaSemana)" class="button button-block button-positive icon ion-checkmark-round"></button>
+  </ion-content>
+</ion-view>

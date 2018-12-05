@@ -1,0 +1,40 @@
+<ion-view title="Detalhar Consulta">
+    <ion-content padding="true" class="has-header">
+        <div class="list card">
+            <div class="item">
+                <!--<i class="icon ion-home"></i>-->
+                <strong>Data: </strong>{{consulta.data}}
+            </div>
+            <div class="item">
+                <strong>Horario: </strong>{{consulta.hora}}
+            </div>
+            <div class="item">
+                <strong>Paciente: </strong>{{consulta.paciente.nome}}
+            </div>
+            <div class="item">
+                <strong>Telefone: </strong>{{consulta.paciente.telefone}}
+            </div>
+            <div class="item">
+                <strong>Data de nascimento: </strong>{{consulta.paciente.dataNascimento}}
+            </div>
+            <div class="item">
+                <strong>Sexo: </strong>{{consulta.paciente.sexo}}
+            </div>
+            <div class="item">
+                <strong>E-mail: </strong>{{consulta.paciente.email}}
+            </div>
+            <div class="item">
+                <strong>Status da consulta: </strong>{{status}}
+            </div>
+        </div>
+        <div class="card" ng-show="verificarObservacao">
+            <div class="item item-text-wrap">
+                <strong>Observação: </strong>{{consulta.observacao}}
+            </div>
+        </div>
+        <div class="button-bar" ng-show="consulta.idStatus == 1">
+            <button class="button button-positive" ng-click="enviarObservacao()">Observação</button>
+            <button class="button button-balanced" ng-click="confirmar()">Confirmar</button>
+        </div>
+    </ion-content>
+</ion-view>

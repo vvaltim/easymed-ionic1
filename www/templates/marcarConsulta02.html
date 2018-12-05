@@ -1,0 +1,13 @@
+<ion-view title="Agendar Consulta">
+  <ion-content padding="true" class="has-header">
+    <div class="list card">
+      <div class="item item-divider">
+        Escolha um médico
+      </div>
+      <div class="item item-avatar" ng-repeat="medico in medicos" ng-click="next(medico)">
+        <h2>{{medico.nome}}</h2>
+        <p>{{medico.endereco}}</p>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

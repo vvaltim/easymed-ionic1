@@ -1,0 +1,14 @@
+<ion-view title="Consultas">
+    <ion-content padding="true" class="has-header">
+        <div class="list card">
+            <div class="item item-icon-left" ng-repeat="consulta in consultas" ng-click="next(consulta)">
+                <!--<img style="background-color:#33cd5f">-->
+                <i class="icon ion-information-circled energized" ng-show="consulta.idStatus == 1"></i>
+                <i class="icon ion-checkmark-circled balanced" ng-show="consulta.idStatus == 2"></i>
+                <i class="icon ion-close-circled assertive" ng-show="consulta.idStatus == 3"></i>
+                <h2>{{consulta.medico.nome}}</h2>
+                <p>{{consulta.data}} - {{consulta.hora}}</p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

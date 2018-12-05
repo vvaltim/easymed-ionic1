@@ -1,0 +1,47 @@
+<ion-view title="Cadastro de Médico">
+  <ion-content padding="true" class="has-header">
+    <form name="formulario" class="list">
+      <div class="card">
+        <label class="item item-input item-stacked-label" ng-class="{ 'has-error' : formulario.nome.$invalid && !formulario.nome.$pristine }">
+          <span class="form-error" ng-show="formulario.nome.$error.required && !formulario.nome.$pristine">Campo obrigatório</span>
+          <input name="nome" type="text" placeholder="Nome" ng-model="medico.nome" required>
+        </label>
+        <label class="item item-input item-stacked-label" ng-class="{ 'has-error' : formulario.endereco.$invalid && !formulario.endereco.$pristine }">
+          <span class="form-error" ng-show="formulario.endereco.$error.required && !formulario.endereco.$pristine">Campo obrigatório</span>
+          <input name="endereco" type="text" placeholder="Endereco" ng-model="medico.endereco" required>
+        </label>
+        <label class="item item-input item-stacked-label" ng-class="{ 'has-error' : formulario.telefone.$invalid && !formulario.telefone.$pristine }">
+          <span class="form-error" ng-show="formulario.telefone.$error.required && !formulario.telefone.$pristine">Campo obrigatório</span>
+          <input name="telefone" type="text" placeholder="Telefone" ng-model="medico.telefone" required>
+        </label>
+        <label class="item item-input item-stacked-label" ng-class="{ 'has-error' : formulario.celular.$invalid && !formulario.celular.$pristine }">
+          <span class="form-error" ng-show="formulario.celular.$error.required && !formulario.celular.$pristine">Campo obrigatório</span>
+          <input name="celular" type="text" placeholder="Celular" ng-model="medico.celular" required>
+        </label>
+        <label class="item item-input item-stacked-label" ng-class="{ 'has-error' : formulario.crm.$invalid && !formulario.crm.$pristine }">
+          <span class="form-error" ng-show="formulario.crm.$error.required && !formulario.crm.$pristine">Campo obrigatório</span>
+          <input name="crm" type="text" placeholder="Crm" ng-model="medico.crm" required>
+        </label>
+        <label class="item item-input item-stacked-label" ng-class="{ 'has-error' : formulario.email.$invalid && !formulario.email.$pristine }">
+          <span class="form-error" ng-show="formulario.email.$error.required && !formulario.email.$pristine">Campo obrigatório</span>
+          <span class="form-error" ng-show="formulario.email.$invalid && !formulario.email.$pristine">O e-mail e inválido</span>
+          <input name="email" type="email" placeholder="E-mail" ng-model="medico.email" required>
+        </label>
+        <label class="item item-input item-stacked-label" ng-class="{ 'has-error' : formulario.senha.$invalid && !formulario.senha.$pristine }">
+          <span class="form-error" ng-show="formulario.senha.$error.required && !formulario.senha.$pristine">Campo obrigatório</span>
+          <span class="form-error" ng-show="formulario.senha.$error.minlength && !formulario.senha.$pristine">Mínimo 8 caracteres</span>
+          <span class="form-error" ng-show="formulario.senha.$error.maxlength && !formulario.senha.$pristine">Máximo 15 caracteres</span>
+          <input name="senha" type="password" placeholder="Senha" ng-model="medico.senha" ng-minlength="8" ng-maxlength="15" required>
+        </label>
+        <label class="item item-select">
+          <span class="input-label">Especialização</span>
+          <span class="form-error" ng-show="formulario.especializacao.$error.required && !formulario.especializacao.$pristine">Selecione uma especíalização</span>
+          <select name="especializacao" ng-model="medico.idEspecializacao" ng-options="especialidade.id as especialidade.nome for especialidade in especialidades" required>
+            <option value = "">Selecione</option>  
+          </select>
+        </label>
+      </div>
+      <button class="button button-positive button-block" ng-click="salvar(medico)"  ng-disabled="formulario.$invalid">Salvar e entrar</button>
+    </form>
+  </ion-content>
+</ion-view>

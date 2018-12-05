@@ -1,0 +1,57 @@
+<ion-view title="Marcar Consulta" id="page6">
+  <ion-content padding="true" class="has-header">
+    <div class="list card">
+      <div class="item item-divider">
+        Informações do médico
+      </div>
+      <div class="item">
+        <!--<i class="icon ion-home"></i>-->
+        <strong>Nome: </strong>{{medico.nome}}
+      </div>
+      <div class="item">
+        <strong>CRM: </strong>{{medico.crm}}
+      </div>
+      <div class="item">
+        <strong>Endereco: </strong>{{medico.endereco}}
+      </div>
+      <div class="item">
+        <strong>Telefone: </strong>{{medico.telefone}}
+      </div>
+      <div class="item">
+        <strong>Celular: </strong>{{medico.celular}}
+      </div>
+      <div class="item">
+        <strong>E-mail: </strong>{{medico.email}}
+      </div>
+      <div class="item item-divider">
+        Convenio
+      </div>
+      <div class="item item-input">
+        <input type="text" placeholder="Inserir convênio se houver" ng-model="consulta.convenio">
+      </div>
+      <div class="item item-divider">
+        Selecione a data da consulta
+      </div>
+      <div class="item item-icon-left" ng-click="pesquisarData()">
+        <i class="icon ion-calendar"></i> {{ consulta.data}}
+      </div>
+      <div class="item item-divider">
+        Selecione o horário da consulta
+      </div>
+      <div class="item" style="padding:0px;">
+        <div class="row" style="flex-wrap: wrap;">
+          <div class="col col-25" ng-repeat="horario in horarios">
+            <button ng-click="next(horario)" class="button button-positive button-block">{{horario}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--<div class="row" style="flex-wrap: wrap;">
+      <div class="col col-25" ng-repeat="horario in horarios">
+        <button ng-click="next(horario)" class="button button-positive button-block">{{horario}}</button>
+      </div>
+    </div>-->
+    <!--<button ng-repeat="horario in horarios" class="button button-positive  button-block" ng-click="next(horario)">{{horario}}</button>-->
+  </ion-content>
+</ion-view>

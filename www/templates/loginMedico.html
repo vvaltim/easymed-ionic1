@@ -1,0 +1,19 @@
+<ion-view title="Login Médico">
+  <ion-content padding="true" class="has-header">
+    <form name="formulario" class="list">
+      <div class="card">
+        <label class="item item-input item-stacked-label" ng-class="{ 'has-error' : formulario.email.$invalid && !formulario.email.$pristine }">
+        <span class="form-error" ng-show="formulario.email.$error.required && !formulario.email.$pristine">Campo obrigatório</span>
+        <span class="form-error" ng-show="formulario.email.$invalid && !formulario.email.$pristine">O e-mail e inválido</span>
+        <input name="email" type="email" placeholder="Email" ng-model="medico.email" required>
+      </label>
+        <label class="item item-input item-stacked-label" ng-class="{ 'has-error' : formulario.senha.$invalid && !formulario.senha.$pristine }">
+        <span class="form-error" ng-show="formulario.senha.$error.required && !formulario.senha.$pristine">Campo obrigatório</span>
+        <input name="senha" type="password" placeholder="Senha" ng-model="medico.senha" required>
+      </label>
+      </div>
+      <button ng-click="login(medico)" class="button button-positive  button-block" ng-disabled="formulario.$invalid">Login</button>
+      <button ui-sref="cadastroDeMedico" class="button button-positive button-clear  button-block">Criar conta</button>
+    </form>
+  </ion-content>
+</ion-view>

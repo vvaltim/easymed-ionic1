@@ -1,0 +1,13 @@
+<ion-view title="Agendar Consulta">
+  <ion-content padding="true" class="has-header">
+    <h4 style="color:#000000;">Escolha a epecialização do medico:</h4>
+    <div class="card">
+      <div class="item item-divider">
+        Escolha um epecialização
+      </div>
+      <div class="item" ng-repeat="especialidade in especialidades" ng-click="next(especialidade)">
+        {{especialidade.nome}}
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

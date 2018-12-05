@@ -1,0 +1,29 @@
+<ion-view title="Configurar Horario Parcial">
+  <ion-content padding="true" class="has-header">
+    <div class="card">
+      <div class="item item-divider">
+        Manhã
+      </div>
+      <div class="item">
+        <div class="row" style="flex-wrap: wrap;">
+          <div class="col col-50" ng-repeat="mostrarAM in mostrarHoraAM">
+            <ion-checkbox style="border:0px;" ng-model="mostrarAM.valor">{{mostrarAM.tempo}}</ion-checkbox>
+          </div>
+        </div>
+      </div>
+      <div class="item item-divider">
+        Tarde
+      </div>
+      <div class="item">
+        <div class="row" style="flex-wrap: wrap;">
+          <div class="col col-50" ng-repeat="mostrarPM in mostrarHoraPM">
+            <ion-checkbox style="border:0px;" ng-model="mostrarPM.valor">{{mostrarPM.tempo}}</ion-checkbox>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button ng-click="salvar(mostrarHoraAM ,mostrarHoraPM)" class="button button-block button-positive">
+      Confirmar
+    </button>
+  </ion-content>
+</ion-view>
